@@ -1,0 +1,16 @@
+
+.product{
+    display: flex;
+    border-bottom: 1px solid darkmagenta;
+    padding: 25px;
+}
+
+.product img{
+    padding-right: 20px;
+}
+
+/* h1{
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+} */
