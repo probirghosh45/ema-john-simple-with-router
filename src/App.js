@@ -13,6 +13,7 @@ import {
 import Review from "./components/Review/Review";
 import Inventory from "./components/Inventory/Inventory";
 import NoMatch from "./components/NoMatch/NoMatch";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route path="/inventory">
                   <Inventory/>
+                </Route>
+                <Route path="/product/:productKey">
+                  <ProductDetails/>
                 </Route>
                 <Route path="*">
                    <NoMatch/>

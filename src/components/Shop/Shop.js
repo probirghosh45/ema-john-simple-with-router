@@ -24,7 +24,7 @@ const Shop = () => {
             {/* {products.length} */}
             {/* {products.map((productItem)=><li>{productItem.name}</li>)} */}
             {products.map((productItem) => (
-                <Product handleClicked={handleClick} product={productItem}></Product>
+                <Product key={productItem.key} showAddToCartButton={true} handleClicked={handleClick} product={productItem}></Product>
             ))}
 
             {/*Data Passing with Props, ekhane "product" [small p] namme parameter[params] "productItem" k pathalam "product page a "props" [props=properties] akare receive korbo"*/}
