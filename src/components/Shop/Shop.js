@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import fakeData from "../../fakeData";
+import { addToDatabaseCart } from "../../utilities/databaseManager";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import './Shop.css';
@@ -13,6 +14,16 @@ const Shop = () => {
       console.log('Button Clicked',product);
       const updatedCart=[...cart,product]
       setCart(updatedCart);
+
+      const sameProduct=updatedCart.filter((productItem)=>(productItem.key===product.key ));
+     const count = sameProduct.length;
+      addToDatabaseCart(product.key,count) //localStorage a data Store korteci 
+    //"addtoDatabaseCart" diye database a data add korlam tarpor 
+    // "getDatabaseCart" diye database theke data restore korbo
+    //addtoDatabaseCart => fakeData theke load hocce
+     //1st a filter kore cross match korlam jate ki ki match product ache miliye nilam..
+     //2nd array ar length jene nilam
+     //tarpor count namme a pass kore dilam
 
   }
 
